@@ -1,52 +1,120 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #00b4db, #0083b0);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    color: white;
 }
 
 .game-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-input {
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
     width: 80%;
+    max-width: 400px;
 }
 
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.title-container {
+    margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-#feedback {
-    margin-top: 10px;
+h1 {
+    font-size: 36px;
     font-weight: bold;
-    color: #333;
+    margin-bottom: 5px;
 }
 
-#score {
-    margin-top: 20px;
+.subtitle {
     font-size: 18px;
+    margin-top: 10px;
+    color: #f1f1f1;
+}
+
+.game-content {
+    margin-top: 20px;
+}
+
+.hint-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.guess-input {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.guess-input:focus {
+    outline: none;
+    border: 2px solid #00b4db;
+}
+
+.submit-btn {
+    padding: 12px 30px;
+    background-color: #00b4db;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0083b0;
+    transform: scale(1.05);
+}
+
+.feedback-text {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.score-text {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .hint-text {
+        font-size: 18px;
+    }
+
+    .guess-input {
+        width: 90%;
+    }
+
+    .submit-btn {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
 }
