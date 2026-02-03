@@ -8,12 +8,17 @@
 </head>
 <body>
     <div class="game-container">
-        <h1>Guess the Word!</h1>
-        <p id="hint">Hint: A type of fruit</p>
-        <input type="text" id="userGuess" placeholder="Type your guess...">
-        <button id="submitBtn">Submit Guess</button>
-        <p id="feedback"></p>
-        <p id="score">Score: 0</p>
+        <div class="title-container">
+            <h1>Word Guessing Game</h1>
+            <p class="subtitle">Can you guess the word?</p>
+        </div>
+        <div class="game-content">
+            <p id="hint" class="hint-text">Hint: A type of fruit</p>
+            <input type="text" id="userGuess" class="guess-input" placeholder="Type your guess...">
+            <button id="submitBtn" class="submit-btn">Submit</button>
+            <p id="feedback" class="feedback-text"></p>
+            <p id="score" class="score-text">Score: 0</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
